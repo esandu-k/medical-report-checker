@@ -1,0 +1,48 @@
+header {
+    background-color: rgb(17, 97, 147);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+}
+
+#main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+section {
+    background-color: rgb(166, 241, 250);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.success-box {
+    background-color: #feffed;
+    color: #000000;
+    border: 1px solid #000000;
+    display: block;
+}
+
+.error-box {
+    background-color: #fefefe;
+    color: #000000;
+    border: 1px solid #000000;
+    display: block;
+}
