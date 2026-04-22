@@ -9,16 +9,59 @@
 </head>
 
 <body>
-    <h1>Understand your health report in seconds</h1>
-    <p>Enter your lab values for cholesterol, blood sugar, blood pressure and lung function — get instant risk
-        classification based on standard medical ranges. </p>
+    <header>
+        <h1>Understand your health report in seconds</h1>
+        <p>Enter your lab values for cholesterol, blood sugar, blood pressure and lung function — get instant risk
+            classification based on standard medical ranges. </p>
+        <p>🛡 Educational tool — not a substitute for professional diagnosis</p>
+    </header>
 
-    <form action="">
-        <label for="report">Medical Report:</label>
-        <textarea name="report" id="report" cols="30" rows="10"></textarea>
-        <button type="submit">Check Report</button>
-    </form>
-    <script src="reportcalcs.js"></script>
+    <main>
+
+        <h2>Choose a panel to analyze</h2>
+        <p>Each section uses internationally recognized reference ranges.</p>
+
+        <section>
+            <h1>Cholesterol Panel</h1>
+            <p>Lipid profile risk assessment</p>
+            <form>
+                <label for="total">Total Cholesterol (mg/dL)</label>
+                <input type="number" id="total-cholesterol" name="total-cholesterol" placeholder="eg.190">
+                <p>Normal < 200 mg/dL</p>
+
+                        <label for="ldl">LDL (Bad) (mg/dL)</label>
+                        <input type="number" id="ldl-cholestrol" name="ldl-cholestrol" placeholder="eg.110">
+                        <p>Normal < 100 mg/dL</p>
+
+                                <label for="hdlHDL (Good) (mg/dL)">HDL (Good) (mg/dL)</label>
+                                <input type="number" id="hdl-cholestrol" name="hdl-cholestrol" placeholder="eg.55">
+                                <p>Healthy > 60 mg/dL</p>
+
+                                <label for="triglycerides">Triglycerides (mg/dL)</label>
+                                <input type="number" id="triglycerides" name="triglycerides" placeholder="eg.130">
+                                <p>Normal < 150 mg/dL</p>
+
+                                        <button type="submit" onclick="calculateCholesterol()"
+                                            onclick="resetButton()">Calculate</button>
+                                        <button type="reset" onclick="resetButton()">Reset</button>
+            </form>
+        </section>
+
+        <section>
+            <h1>Diabetes Screening</h1>
+            <p>Blood glucose</p>
+
+            <form>
+                <label for="fasting-glucose">Fasting Glucose (mg/dL)</label>
+                <input type="number" id="fasting-glucose" name="fasting-glucose" placeholder="eg.95">
+                <p>Normal < 100</p>
+
+                        <button type="submit" onclick="calculateDiabetes()" onclick="resetButton()">Calculate</button>
+                        <button type="reset" onclick="resetButton()">Reset</button>
+            </form>
+        </section>
+    </main>
+
 </body>
 
 </html>
