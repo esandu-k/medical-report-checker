@@ -21,55 +21,58 @@
             <h2>Choose a panel to analyze</h2>
             <p>Each section uses internationally recognized reference ranges.</p>
         </div>
-        
-        <section>
-            <h1>Cholesterol Panel</h1>
-            <p>Lipid profile risk assessment</p>
-            <!-- Fixed: Added onsubmit to prevent page refresh -->
-            <form onsubmit="event.preventDefault(); calculateCholesterol();">
-                <label for="total-cholesterol">Total Cholesterol (mg/dL)</label>
-                <input type="number" id="total-cholesterol" name="total-cholesterol" placeholder="eg.190">
-                <p>Normal < 200 mg/dL</p>
 
-                <label for="ldl-cholestrol">LDL (Bad) (mg/dL)</label>
-                <input type="number" id="ldl-cholestrol" name="ldl-cholestrol" placeholder="eg.110">
-                <p>Normal < 100 mg/dL</p>
+        <div class="panels-container">
+            <section>
+                <h1>Cholesterol Panel</h1>
+                <p>Lipid profile risk assessment</p>
+                <!-- Fixed: Added onsubmit to prevent page refresh -->
+                <form onsubmit="event.preventDefault(); calculateCholesterol();">
+                    <label for="total-cholesterol">Total Cholesterol (mg/dL)</label>
+                    <input type="number" id="total-cholesterol" name="total-cholesterol" placeholder="eg.190">
+                    <p>Normal < 200 mg/dL</p>
 
-                <label for="hdl-cholestrol">HDL (Good) (mg/dL)</label>
-                <input type="number" id="hdl-cholestrol" name="hdl-cholestrol" placeholder="eg.55">
-                <p>Healthy > 60 mg/dL</p>
+                            <label for="ldl-cholestrol">LDL (Bad) (mg/dL)</label>
+                            <input type="number" id="ldl-cholestrol" name="ldl-cholestrol" placeholder="eg.110">
+                            <p>Normal < 100 mg/dL</p>
 
-                <label for="triglycerides">Triglycerides (mg/dL)</label>
-                <input type="number" id="triglycerides" name="triglycerides" placeholder="eg.130">
-                <p>Normal < 150 mg/dL</p>
+                                    <label for="hdl-cholestrol">HDL (Good) (mg/dL)</label>
+                                    <input type="number" id="hdl-cholestrol" name="hdl-cholestrol" placeholder="eg.55">
+                                    <p>Healthy > 60 mg/dL</p>
 
-                <div class="button-group">
-                    <button type="submit">Calculate</button>
-                    <button type="reset" onclick="resetResults('cholesterol-result')">Reset</button>
-                </div>
-                
-                <p id="cholesterol-result" class="result-box"></p>
-            </form>
-        </section>
+                                    <label for="triglycerides">Triglycerides (mg/dL)</label>
+                                    <input type="number" id="triglycerides" name="triglycerides" placeholder="eg.130">
+                                    <p>Normal < 150 mg/dL</p>
 
-        <section>
-            <h1>Diabetes Screening</h1>
-            <p>Blood glucose</p>
+                                            <div class="button-group">
+                                                <button type="submit">Calculate</button>
+                                                <button type="reset"
+                                                    onclick="resetResults('cholesterol-result')">Reset</button>
+                                            </div>
 
-            <!-- Fixed: Added onsubmit to prevent page refresh -->
-            <form onsubmit="event.preventDefault(); calculateDiabetes();">
-                <label for="fasting-glucose">Fasting Glucose (mg/dL)</label>
-                <input type="number" id="fasting-glucose" name="fasting-glucose" placeholder="eg.95">
-                <p>Normal < 100</p>
+                                            <p id="cholesterol-result" class="result-box"></p>
+                </form>
+            </section>
 
-                <div class="button-group">
-                    <button type="submit">Calculate</button>
-                    <button type="reset" onclick="resetResults('diabetes-result')">Reset</button>
-                </div>
+            <section>
+                <h1>Diabetes Screening</h1>
+                <p>Blood glucose</p>
 
-                <p id="diabetes-result" class="result-box"></p>
-            </form>
-        </section>
+                <!-- Fixed: Added onsubmit to prevent page refresh -->
+                <form onsubmit="event.preventDefault(); calculateDiabetes();">
+                    <label for="fasting-glucose">Fasting Glucose (mg/dL)</label>
+                    <input type="number" id="fasting-glucose" name="fasting-glucose" placeholder="eg.95">
+                    <p>Normal < 100</p>
+
+                            <div class="button-group">
+                                <button type="submit">Calculate</button>
+                                <button type="reset" onclick="resetResults('diabetes-result')">Reset</button>
+                            </div>
+
+                            <p id="diabetes-result" class="result-box"></p>
+                </form>
+            </section>
+        </div>
     </main>
 
     <!-- Fixed: Missing script link was the main reason it wasn't working -->
